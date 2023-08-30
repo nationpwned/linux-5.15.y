@@ -86,6 +86,3 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           body: |
             - The kernel can be used to compile Armbian and OpenWrt.
-            - The kernel source code comes from: ${{ inputs.kernel_source }}
-            - The kernel compilation toolchain: ${{ inputs.kernel_toolchain }}
-            - This is a `stable` kernel, which can be used in Armbian and OpenWrt.
