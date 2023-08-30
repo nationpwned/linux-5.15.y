@@ -32,8 +32,8 @@ on:
       kernel_config:
         description: "Set the path of kernel .config"
         required: false
-        default: "false"
-
+        default: "kernel-config/release/general"
+        
 env:
   TZ: Asia/Jakarta
 
