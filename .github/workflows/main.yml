@@ -1,10 +1,8 @@
 #==========================================================================
-# Description: Compile release general kernel
-# Copyright (C) 2021 https://github.com/unifreq/openwrt_packit
-# Copyright (C) 2021 https://github.com/ophub/kernel
+# Description: Compile kernel
 #==========================================================================
 
-name: Compile release general kernel
+name: Compile kernel
 
 on:
   repository_dispatch:
@@ -67,7 +65,7 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Compile the kernel [ ${{ inputs.kernel_version }} ]
-        uses: ophub/amlogic-s9xxx-armbian@main
+        uses: nationpwned/amlogic-s9xxx-armbian@main
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         with:
           build_target: kernel
