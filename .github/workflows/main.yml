@@ -32,7 +32,7 @@ on:
       kernel_config:
         description: "Set the path of kernel .config"
         required: false
-        default: "https://github.com/nationpwned/kernel/blob/main/kernel-config/release/general/config-5.15"
+        default: "kernel-config/release/general"
         
 env:
   TZ: Asia/Jakarta
