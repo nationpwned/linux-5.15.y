@@ -74,13 +74,13 @@ jobs:
           kernel_auto: ${{ inputs.kernel_auto }}
           kernel_package: ${{ inputs.kernel_package }}
           kernel_toolchain: ${{ inputs.kernel_toolchain }}
-          kernel_config: ${{ inputs.kernel_config }}
+          kernel_config: ${{ inputs.kernel_conf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ig }}
 
       - name: Upload Kernel to Release
         uses: ncipollo/release-action@main
         if: ${{ env.PACKAGED_STATUS }} == 'success' && !cancelled()
         with:
-          tag: kernel-5.15.14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8
+          tag: kernel-5.15.148
           artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
           allowUpdates: true
           token: ${{ secrets.GH_TOKEN }}
